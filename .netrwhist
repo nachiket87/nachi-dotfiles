@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/nachiketpusalkar/.config/nvim'
+let g:netrw_dirhist_8='/Users/nachiketpusalkar/PythonPractice/Cpp'
+let g:netrw_dirhist_7='/Users/nachiketpusalkar/PythonPractice'
+let g:netrw_dirhist_6='/Users/nachiketpusalkar/PythonPractice/Practice'
+let g:netrw_dirhist_5='/Users/nachiketpusalkar/code/nachiket87/fullstack-challenges/02-OOP/02-OO-Advanced/04-About-self'
+let g:netrw_dirhist_4='/Users/nachiketpusalkar/code/nachiket87/fullstack-challenges/02-OOP/02-OO-Advanced'
+let g:netrw_dirhist_3='/Users/nachiketpusalkar/PythonPractice/InterviewCake'
+let g:netrw_dirhist_2='/Users/nachiketpusalkar/PythonPractice'
+let g:netrw_dirhist_1='/Users/nachiketpusalkar/.config/nvim'
