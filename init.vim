@@ -1,5 +1,6 @@
 syntax on
 
+set clipboard+=unnamedplus
 set noshowmatch
 set formatoptions-=cro
 set ma
@@ -90,3 +91,8 @@ inoremap <silent><expr> <Tab>
 
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-P>" : "\<C-H>"
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
+augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
