@@ -37,6 +37,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails'
+
 call plug#end()
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 inoremap <silent><expr> <C-space> coc#refresh()
@@ -96,3 +99,9 @@ augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
+
+nmap <leader>gs :G<CR>
+nmap <leader>gc :G commit<CR>
+nmap <leader>gq :G push origin master<CR>
+
+
