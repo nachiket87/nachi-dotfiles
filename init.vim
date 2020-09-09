@@ -1,7 +1,5 @@
-syntax on
-
-set clipboard+=unnamedplus
 set noshowmatch
+syntax on
 set formatoptions-=cro
 set notermguicolors
 set ma
@@ -24,14 +22,15 @@ set undofile
 set incsearch
 set scrolloff=8
 set noshowmode
+"let loaded_matchparen = 1
+
 
 call plug#begin('~/.config/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 Plug 'gruvbox-community/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'ayu-theme/ayu-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -42,10 +41,10 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-surround'
 
+
 call plug#end()
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 inoremap <silent><expr> <C-space> coc#refresh()
-
 let mapleader = " "
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -84,13 +83,9 @@ let g:fzf_action = {
 let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
 let g:loaded_python_provider = 0
 
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_invert_selection='0'
 let g:airline_powerline_fonts = 1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
-set background=dark
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-colorscheme dracula
 hi Normal guibg=NONE ctermbg=NONE
 
 " use <tab> for trigger completion and navigate to the next complete item
@@ -110,3 +105,4 @@ nmap <leader>gs :G<CR>
 nmap <leader>gu :diffget //3<CR>
 nmap <leader>gh :diffget //2<CR>
 
+colorscheme gruvbox
