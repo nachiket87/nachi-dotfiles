@@ -52,7 +52,7 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>b :NERDTreeToggle<CR>
-nnoremap <leader>p :GFiles<CR>
+nnoremap <leader>p :FZF<CR>
 nnoremap <leader>rt :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>r :Rg<SPACE>
 nnoremap <leader>gr :CocSearch 
@@ -80,7 +80,7 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit'
   \}
-let g:python3_host_prog = '/Library/Frameworks/Python.framework/Versions/3.8/bin/python3.8'
+let g:python3_host_prog = '/usr/local/Cellar/python@3.8/3.8.5/bin/python3'
 let g:loaded_python_provider = 0
 
 let g:airline_powerline_fonts = 1
